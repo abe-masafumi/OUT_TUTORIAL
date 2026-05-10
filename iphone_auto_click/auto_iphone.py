@@ -58,25 +58,31 @@ POSITIONS = [
 
 
 # 1回の操作で待機する秒数
-WAIT_SEC = 2
+WAIT_SEC = 0.2
 # 長押しする秒数
 HOLD_SEC = 1
 # 繰り返し回数（10分間なら調整）
 REPEAT = 1  # テスト用に1回繰り返し
 
-# 途中から実行したい場合はここを変更（0なら最初から、5なら6番目から）
-START_INDEX = 1
+
+# 実行したいインデックス番号のリスト（例: [3, 5, 10]）
+INDEXES = [12]  # 例: [3, 5, 10] など。Noneなら全体を実行
+START_INDEX = 12  # INDEXESがNoneのときのみ有効
 
 
-print('3秒後に開始し、まず(160, 846)でウィンドウをアクティブ化します。')
-time.sleep(3)
+print('まず(160, 846)でウィンドウをアクティブ化します。')
 pyautogui.moveTo(160, 846, duration=0.2)
 pyautogui.click()
 time.sleep(1.0)
 
 for i in range(REPEAT):
     print(f'{i+1}回目')
-    for op in POSITIONS[START_INDEX:]:
+    # 実行対象インデックスのリストを決定
+    if INDEXES is not None:
+        target_ops = [POSITIONS[idx] for idx in INDEXES]
+    else:
+        target_ops = POSITIONS[START_INDEX:]
+    for op in target_ops:
         desc = op[4] if len(op) > 4 else ""
         if desc:
             print(f'操作: {desc}')
