@@ -27,29 +27,29 @@ def scenario():
         # 10 適当クリック
         lambda: click_at(210, 992, 12.0),
         # 11 はい
-        lambda: click_at(210, 992, 5.0),
+        lambda: click_at(210, 992, 4.0),
         # 12 適当クリック
-        lambda: click_at(210, 992, 15.0),
+        lambda: click_at(210, 994, 12.0),
         # 13 移動
         lambda: swipe_drag(duration=12.0),
         # 14 モーダルクリック
         lambda: click_at(158, 833, 2.0),
         # 15 戦闘 少し移動 
-        lambda: swipe_drag(duration=2.5, wait_sec=8.0),
+        lambda: swipe_drag(duration=2.5, wait_sec=7.0),
         # 16 戦闘まで 移動 → 戦闘終了
-        lambda: swipe_drag(duration=10.0, wait_sec=7.0),
+        lambda: swipe_drag(duration=9.0, wait_sec=6.0),
         # 17 戦闘後移動
-        lambda: swipe_drag(duration=10.0, wait_sec=7.0),
+        lambda: swipe_drag(duration=10.0, wait_sec=6.0),
         # 18 スキップ選択
-        lambda: click_at(270, 1002, 1.0),
+        lambda: click_at(270, 1002, 0.0),
         # 19 スキップ はい
         lambda: click_at(228, 816, 5.0),
         # 20 モーダルクリック
-        lambda: click_at(228, 816, 5.0),
+        lambda: click_at(228, 816, 3.0),
         # 21 ボス戦 少し前に移動
         lambda: swipe_drag(duration=1.5, wait_sec=11.0),
         # 22 スキップ選択
-        lambda: click_at(270, 1002, 2.0),
+        lambda: click_at(270, 1002, 0.0),
         # 23 スキップ はい
         lambda: click_at(228, 816, 2.0),
         # 24 閉じる
@@ -57,13 +57,13 @@ def scenario():
         # 25 スキル選択
         lambda: click_at(222, 700, 3.0),
         # 26 スキップ選択
-        lambda: click_at(270, 1002, 2.0),
+        lambda: click_at(270, 1002, 0.0),
         # 27 スキップ はい
         lambda: click_at(228, 816, 2.0),
         # 28 モーダルクリック
-        lambda: click_at(228, 816, 2.0),
+        lambda: click_at(228, 816, 4.0),
         # 29 右矢印
-        lambda: click_at(251, 859, 1.0),
+        lambda: click_at(251, 859, 1.5),
         # 30 右矢印
         lambda: click_at(251, 860, 1.5),
         # 31 右矢印
@@ -75,19 +75,19 @@ def scenario():
         # 34 スキル選択
         lambda: click_at(222, 700, 1.0),
         # 35 スキル選択
-        lambda: click_at(222, 700, 10.0),
+        lambda: click_at(222, 700, 5.0),
         # 36 スキップ選択
-        lambda: click_at(270, 1002, 1.0),
+        lambda: click_at(270, 1002, 0.0),
         # 37 スキップ はい
-        lambda: click_at(228, 816, 5),
+        lambda: click_at(228, 816, 7),
         # 38 スキップ選択
-        lambda: click_at(270, 1002, 1.0),
+        lambda: click_at(270, 1002, 0.0),
         # 39 スキップ はい
-        lambda: click_at(228, 816, 4.0),
+        lambda: click_at(228, 816, 3.0),
         # 40 移動 アイテムオブジェまで移動
         lambda: swipe_drag(duration=2.5, wait_sec=2.0),
         # 41 スキップ選択
-        lambda: click_at(270, 1002, 1.0),
+        lambda: click_at(270, 1002, 0.0),
         # 42 スキップ はい
         lambda: click_at(228, 816, 1.0),
         # 43 右矢印
@@ -106,30 +106,32 @@ def scenario():
         lambda: click_at(222, 700, 15),
         # 50 スキル選択
         lambda: click_at(222, 700, 15),
-        # 51 スキル選択
-        lambda: click_at(222, 700, 10.0),
-        # 52 移動 戦闘完了まで
-        lambda: swipe_drag(duration=5.5, wait_sec=10.0),
-        # 53 スキル選択
-        lambda: click_at(222, 700, 10),
+        # 51
+        lambda: click_at(222, 700, 5),
+        # 52 スキル選択
+        lambda: click_at(222, 700, 0.0),
+        # 53 移動 戦闘完了まで
+        lambda: swipe_drag(duration=5.5, wait_sec=9.0),
         # 54 スキル選択
         lambda: click_at(222, 700, 10),
         # 55 スキル選択
+        lambda: click_at(222, 700, 11),
+        # 56 スキル選択
         lambda: click_at(222, 700, 0.5),
-        # 56 移動 戦闘完了まで
-        lambda: swipe_drag(duration=6.5, wait_sec=1.0),
         # 57 スキル選択
+        lambda: click_at(222, 700, 1.5),
+        # 57 スキル選択
+        lambda: click_at(222, 700, 0.0),
+        # 58 移動 オブジェクトまで
+        lambda: swipe_drag(duration=6.5, wait_sec=1.0),
+        # 59 スキル選択
         lambda: click_at(222, 700, 0.5),
-        # 58 移動 ボス戦闘まで
-        lambda: swipe_drag(duration=5.0, wait_sec=2.0),
-        # 59 スキップ選択
-        lambda: click_at(270, 1002, 1.0),
-        # 60 スキップ はい
+        # 60 移動 トロルボス戦闘まで
+        lambda: swipe_drag(duration=5.0, wait_sec=0),
+        # 61 スキップ選択
+        lambda: click_at(270, 1002, 0.0),
+        # 62 スキップ はい
         lambda: click_at(228, 816, 84.0),
-        # 61 モーダルクリック
-        lambda: click_at(228, 816, 1.5),
-        # 62 モーダルクリック
-        lambda: click_at(228, 816, 1.5),
         # 63 モーダルクリック
         lambda: click_at(228, 816, 1.5),
         # 64 モーダルクリック
@@ -137,52 +139,118 @@ def scenario():
         # 65 モーダルクリック
         lambda: click_at(228, 816, 1.5),
         # 66 モーダルクリック
-        lambda: click_at(228, 816, 7.5),
+        lambda: click_at(228, 816, 1.5),
         # 67 モーダルクリック
-        lambda: click_at(228, 816, 7.5),
+        lambda: click_at(228, 816, 1.5),
         # 68 モーダルクリック
         lambda: click_at(228, 816, 7.5),
-        # 69 スキップ選択
+        # 69 モーダルクリック
+        lambda: click_at(228, 816, 3.5),
+        # 70 モーダルクリック
+        lambda: click_at(228, 816, 7.5),
+        # 71 スキップ選択
         lambda: click_at(270, 1002, 1.0),
-        # 70 スキップ はい
-        lambda: click_at(228, 816, 90.0),
-        # 71 モーダルクリック
-        lambda: click_at(228, 816, 7.5),
-        # 72 モーダルクリック
-        lambda: click_at(228, 816, 7.5),
-        # 73 ぼうけん
-        lambda: click_at(87, 1009, 5.0),
+        # 72 スキップ はい
+        lambda: click_at(228, 816, 1.0),
+        # 73 モーダルクリック
+        lambda: click_at(228, 816, 1.5),
         # 74 モーダルクリック
-        lambda: click_at(228, 816, 7.5),
-        # 75 モーダルクリック
-        lambda: click_at(159, 808, 5.0),
-        # 76 ステージ1
-        lambda: click_at(159, 665, 2.0),
+        lambda: click_at(228, 816, 1.5),
+        # 75 ぼうけん
+        lambda: click_at(87, 1009, 1.5),
+        # 76 モーダルクリック
+        lambda: click_at(228, 816, 2.5),
         # 77 モーダルクリック
-        lambda: click_at(159, 808, 5.0),
+        lambda: click_at(159, 808, 2.5),
         # 78 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 79 ステージ1
+        lambda: click_at(159, 665, 1.5),
+        # 80 モーダルクリック
+        lambda: click_at(159, 808, 1.5),
+        # 81 モーダルクリック
         lambda: click_at(160, 891, 3.0),
-        # 79 スキップ選択
+        # 82 スキップ選択
         lambda: click_at(270, 1002, 1.0),
-        # 80 スキップ はい
+        # 83 スキップ はい
         lambda: click_at(228, 816, 5.0),
-        # 81 移動 戦闘完了まで
-        lambda: swipe_drag(duration=6.0, wait_sec=20.0),
-        # 82 スキル選択
-        lambda: click_at(222, 700, 0.5),
-        # 83 移動-工夫
-        lambda: swipe_drag(x2=226 ,duration=10.0, wait_sec=7.0),
-        # 84 スキップ選択
+        # 84 移動 戦闘完了まで
+        lambda: swipe_drag(duration=5.0, wait_sec=35.0),
+        # 85 スキル選択
+        lambda: click_at(222, 700, 2.5),
+        # 86 スキル選択
+        lambda: click_at(222, 700, 2.5),
+        # 87 移動-斜め移動
+        lambda: swipe_drag(x2=226 ,duration=15.0, wait_sec=2.0),
+        # 88 スキップ選択
         lambda: click_at(270, 1002, 1.0),
-        # 85 スキップ はい
-        lambda: click_at(228, 816, 5.0),
-        # 86 必殺技
-        lambda: click_at(228, 816, 5.0),
-        # 87 スキップ選択
+        # 89 スキップ はい
+        lambda: click_at(228, 816, 7.0),
+        # 90 必殺技
+        lambda: click_at(262, 845, 8.0),
+        # 91 必殺技
+        lambda: click_at(262, 845, 15.0),
+        # 92 スキップ選択
+        lambda: click_at(270, 1002, 0.0),
+        # 93 スキップ はい
+        lambda: click_at(228, 816, 8.0),
+        # 94 次へ
+        lambda: click_at(160, 963, 1.0),
+        # 95 次へ
+        lambda: click_at(160, 963, 4.0),
+        # 96 次へ
+        lambda: click_at(160, 963, 4.0),
+        # 97 次へ
+        lambda: click_at(160, 1000, 4.0),
+        # 98 スキップ選択
         lambda: click_at(270, 1002, 1.0),
-        # 88 スキップ はい
-        lambda: click_at(228, 816, 5.0),
-        # 89 完了
+        # 99 スキップ はい
+        lambda: click_at(228, 816, 2.5),
+        # 100 モーダルクリック
+        lambda: click_at(159, 808, 1.5),
+        # 101 ふくびき
+        lambda: click_at(280, 1000, 3.0),
+        # 102 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 103 1回ふくびき
+        lambda: click_at(160, 877, 2.0),
+        # 104 スキップ選択
+        lambda: click_at(270, 963, 3.0),
+        # 105 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 106 モーダルクリック
+        lambda: click_at(28, 1000, 2.5),
+        # 107 戻る
+        lambda: click_at(28, 1000, 2.5),
+        # 108 構成
+        lambda: click_at(28, 1010, 2.0),
+        # 109 モーダルクリック
+        lambda: click_at(159, 808, 1.0),
+        # 110 モーダルクリック
+        lambda: click_at(159, 808, 1.0),
+        # 111 モーダルクリック
+        lambda: click_at(41, 863, 1.5),
+        # 112 モーダルクリック
+        lambda: click_at(41, 602, 1.5),
+        # 113 モーダルクリック
+        lambda: click_at(156, 757, 1.5),
+        # 114 モーダルクリック
+        lambda: click_at(41, 60, 1.5),
+        # 115 決定
+        lambda: click_at(159, 988, 1.5),
+        # 116 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 117 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 118 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 119 モーダルクリック
+        lambda: click_at(159, 808, 2.5),
+        # 120 戻る
+        lambda: click_at(28, 1000, 2.5),
+        # 121 ホーム
+        lambda: click_at(36, 1000, 2.5),
+        # 122
         lambda: print('完了しました'),
     ]
 
